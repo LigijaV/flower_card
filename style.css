@@ -53,6 +53,85 @@ body {
   background: rgba(90, 69, 164, 0.15);
 }
 
+
+/* FLOWING AURORA / CLOUD LIGHT */
+
+.aurora {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 0;
+  animation: aurora-appear 3s ease forwards 2s;
+}
+
+.aurora__wave {
+  fill: none;
+  stroke-linecap: round;
+  filter: url(#auroraBlur);
+  transform-box: fill-box;
+  transform-origin: center;
+  mix-blend-mode: screen;
+}
+
+.aurora__wave--1 {
+  stroke: url(#auroraGradient1);
+  stroke-width: 105;
+  animation: aurora-flow-one 18s ease-in-out infinite alternate;
+}
+
+.aurora__wave--2 {
+  stroke: url(#auroraGradient2);
+  stroke-width: 82;
+  animation: aurora-flow-two 23s ease-in-out infinite alternate-reverse;
+}
+
+.aurora__wave--3 {
+  stroke: url(#auroraGradient1);
+  stroke-width: 58;
+  opacity: 0.65;
+  animation: aurora-flow-three 27s ease-in-out infinite alternate;
+}
+
+@keyframes aurora-appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes aurora-flow-one {
+  from {
+    transform: translate(-5%, 2%) scale(1);
+  }
+  to {
+    transform: translate(7%, -5%) scale(1.08);
+  }
+}
+
+@keyframes aurora-flow-two {
+  from {
+    transform: translate(7%, -3%) scale(1.06);
+  }
+  to {
+    transform: translate(-7%, 4%) scale(0.96);
+  }
+}
+
+@keyframes aurora-flow-three {
+  from {
+    transform: translate(-4%, 3%) scale(1.02);
+  }
+  to {
+    transform: translate(6%, -2%) scale(1.1);
+  }
+}
+
 .moon {
   position: absolute;
   z-index: 2;
@@ -1322,4 +1401,4 @@ body {
   .water-flower--3 {
     right: 3%;
   }
-}/*# sourceMappingURL=style.css.map */
+}
