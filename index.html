@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Daudz Laimes 🌹</title>
 
     <link rel="stylesheet" href="style.css">
@@ -15,166 +14,23 @@
 
 <main class="scene">
 
-    <!-- BACKGROUND -->
-
     <div class="sky"></div>
 
     <div class="nebula nebula--one"></div>
     <div class="nebula nebula--two"></div>
 
-
-    <!-- FLOWING AURORA / CLOUD LIGHT -->
-
-    <svg
-        class="aurora"
-        viewBox="0 0 1000 1000"
-        preserveAspectRatio="none"
-        aria-hidden="true"
-    >
-
-        <defs>
-
-            <linearGradient
-                id="auroraGradient1"
-                x1="0%"
-                y1="50%"
-                x2="100%"
-                y2="50%"
-            >
-                <stop
-                    offset="0%"
-                    stop-color="#4ea9d8"
-                    stop-opacity="0"
-                />
-
-                <stop
-                    offset="30%"
-                    stop-color="#78d5dc"
-                    stop-opacity="0.45"
-                />
-
-                <stop
-                    offset="55%"
-                    stop-color="#9b83dc"
-                    stop-opacity="0.32"
-                />
-
-                <stop
-                    offset="78%"
-                    stop-color="#d88bc7"
-                    stop-opacity="0.22"
-                />
-
-                <stop
-                    offset="100%"
-                    stop-color="#4ea9d8"
-                    stop-opacity="0"
-                />
-            </linearGradient>
-
-
-            <linearGradient
-                id="auroraGradient2"
-                x1="0%"
-                y1="50%"
-                x2="100%"
-                y2="50%"
-            >
-
-                <stop
-                    offset="0%"
-                    stop-color="#6d7ee8"
-                    stop-opacity="0"
-                />
-
-                <stop
-                    offset="35%"
-                    stop-color="#718de9"
-                    stop-opacity="0.28"
-                />
-
-                <stop
-                    offset="58%"
-                    stop-color="#c48be1"
-                    stop-opacity="0.25"
-                />
-
-                <stop
-                    offset="82%"
-                    stop-color="#63cbd3"
-                    stop-opacity="0.18"
-                />
-
-                <stop
-                    offset="100%"
-                    stop-color="#6d7ee8"
-                    stop-opacity="0"
-                />
-
-            </linearGradient>
-
-
-            <filter id="auroraBlur">
-                <feGaussianBlur stdDeviation="22" />
-            </filter>
-
-        </defs>
-
-
-        <!-- MAIN FLOW -->
-
-        <path
-            class="aurora__wave aurora__wave--1"
-            d="
-                M-120 430
-                C100 260 300 570 500 390
-                C700 210 850 480 1120 300
-            "
-            pathLength="1"
-        />
-
-
-        <!-- SECOND FLOW -->
-
-        <path
-            class="aurora__wave aurora__wave--2"
-            d="
-                M-140 540
-                C100 350 300 650 540 470
-                C750 315 900 590 1140 410
-            "
-            pathLength="1"
-        />
-
-
-        <!-- THIRD SUBTLE FLOW -->
-
-        <path
-            class="aurora__wave aurora__wave--3"
-            d="
-                M-120 650
-                C150 460 340 740 590 570
-                C790 430 900 690 1130 520
-            "
-            pathLength="1"
-        />
-
-    </svg>
-
-
-    <!-- MOON -->
-
-    <div class="moon">
-
-        <div class="moon__body"></div>
-
+    <div class="flow-light" aria-hidden="true">
+        <div class="flow-ribbon flow-ribbon--1"></div>
+        <div class="flow-ribbon flow-ribbon--2"></div>
+        <div class="flow-ribbon flow-ribbon--3"></div>
+        <div class="flow-ribbon flow-ribbon--4"></div>
     </div>
 
-
-    <!-- STARS -->
+    <div class="moon">
+        <div class="moon__body"></div>
+    </div>
 
     <div class="stars">
-
         <span class="star star--1"></span>
         <span class="star star--2"></span>
         <span class="star star--3"></span>
@@ -199,37 +55,25 @@
         <span class="star star--22"></span>
         <span class="star star--23"></span>
         <span class="star star--24"></span>
-
     </div>
-
-
-    <!-- CONSTELLATIONS -->
 
     <div class="constellations">
 
         <div class="constellation constellation--left">
-
             <span></span>
             <span></span>
             <span></span>
             <span></span>
-
         </div>
 
-
         <div class="constellation constellation--right">
-
             <span></span>
             <span></span>
             <span></span>
             <span></span>
-
         </div>
 
     </div>
-
-
-    <!-- BIRTHDAY MESSAGE -->
 
     <div class="message">
 
@@ -243,43 +87,27 @@
 
     </div>
 
-
-    <!-- FLOATING ROSE PETALS -->
-
     <div class="floating-petals">
-
         <span></span>
         <span></span>
         <span></span>
         <span></span>
         <span></span>
         <span></span>
-
     </div>
-
-
-    <!-- WATER -->
 
     <div class="water">
 
         <div class="water-glow"></div>
 
-
-        <!-- WATER RIPPLES -->
-
         <div class="ripples">
-
             <span></span>
             <span></span>
             <span></span>
             <span></span>
             <span></span>
             <span></span>
-
         </div>
-
-
-        <!-- LILY PADS -->
 
         <div class="lily-pad lily-pad--1">
             <div class="lily-pad__leaf"></div>
@@ -301,57 +129,39 @@
             <div class="lily-pad__leaf"></div>
         </div>
 
-
-        <!-- WATER FLOWERS -->
-
         <div class="water-flower water-flower--1">
-
             <span></span>
             <span></span>
             <span></span>
             <span></span>
             <span></span>
-
         </div>
-
 
         <div class="water-flower water-flower--2">
-
             <span></span>
             <span></span>
             <span></span>
             <span></span>
             <span></span>
-
         </div>
-
 
         <div class="water-flower water-flower--3">
-
             <span></span>
             <span></span>
             <span></span>
             <span></span>
             <span></span>
-
         </div>
-
 
         <div class="water-flower water-flower--4">
-
             <span></span>
             <span></span>
             <span></span>
             <span></span>
             <span></span>
-
         </div>
 
-
-        <!-- WATER SPARKLES -->
-
         <div class="water-sparkles">
-
             <span>✦</span>
             <span>✧</span>
             <span>·</span>
@@ -360,18 +170,13 @@
             <span>·</span>
             <span>✦</span>
             <span>✧</span>
-
         </div>
 
     </div>
 
-
-    <!-- BOUQUET -->
-
     <div class="bouquet">
 
         <div class="bouquet-glow"></div>
-
 
         <svg
             class="bouquet__svg"
@@ -381,79 +186,35 @@
 
             <defs>
 
-                <!-- ROSE GRADIENTS -->
-
                 <radialGradient
                     id="rosePetal"
                     cx="35%"
                     cy="30%"
                 >
-                    <stop
-                        offset="0%"
-                        stop-color="#ffd2cf"
-                    />
-
-                    <stop
-                        offset="45%"
-                        stop-color="#f48791"
-                    />
-
-                    <stop
-                        offset="100%"
-                        stop-color="#b92f50"
-                    />
+                    <stop offset="0%" stop-color="#ffd2cf"/>
+                    <stop offset="45%" stop-color="#f48791"/>
+                    <stop offset="100%" stop-color="#b92f50"/>
                 </radialGradient>
-
 
                 <radialGradient
                     id="rosePetalDark"
                     cx="40%"
                     cy="35%"
                 >
-
-                    <stop
-                        offset="0%"
-                        stop-color="#f9a1a7"
-                    />
-
-                    <stop
-                        offset="60%"
-                        stop-color="#d95770"
-                    />
-
-                    <stop
-                        offset="100%"
-                        stop-color="#852342"
-                    />
-
+                    <stop offset="0%" stop-color="#f9a1a7"/>
+                    <stop offset="60%" stop-color="#d95770"/>
+                    <stop offset="100%" stop-color="#852342"/>
                 </radialGradient>
-
 
                 <radialGradient
                     id="roseCenter"
                     cx="40%"
                     cy="35%"
                 >
-
-                    <stop
-                        offset="0%"
-                        stop-color="#f9b0b0"
-                    />
-
-                    <stop
-                        offset="60%"
-                        stop-color="#a52c50"
-                    />
-
-                    <stop
-                        offset="100%"
-                        stop-color="#64172f"
-                    />
-
+                    <stop offset="0%" stop-color="#f9b0b0"/>
+                    <stop offset="60%" stop-color="#a52c50"/>
+                    <stop offset="100%" stop-color="#64172f"/>
                 </radialGradient>
-
-
-                <!-- LEAF -->
 
                 <linearGradient
                     id="leafGradient"
@@ -462,185 +223,95 @@
                     x2="100%"
                     y2="100%"
                 >
-
-                    <stop
-                        offset="0%"
-                        stop-color="#8fba62"
-                    />
-
-                    <stop
-                        offset="50%"
-                        stop-color="#4e873d"
-                    />
-
-                    <stop
-                        offset="100%"
-                        stop-color="#285d35"
-                    />
-
+                    <stop offset="0%" stop-color="#8fba62"/>
+                    <stop offset="50%" stop-color="#4e873d"/>
+                    <stop offset="100%" stop-color="#285d35"/>
                 </linearGradient>
-
-
-                <!-- BUD -->
 
                 <radialGradient
                     id="budGradient"
                     cx="35%"
                     cy="30%"
                 >
-
-                    <stop
-                        offset="0%"
-                        stop-color="#ffb2b0"
-                    />
-
-                    <stop
-                        offset="60%"
-                        stop-color="#d94d67"
-                    />
-
-                    <stop
-                        offset="100%"
-                        stop-color="#81233e"
-                    />
-
+                    <stop offset="0%" stop-color="#ffb2b0"/>
+                    <stop offset="60%" stop-color="#d94d67"/>
+                    <stop offset="100%" stop-color="#81233e"/>
                 </radialGradient>
 
-
-                <!-- GLOW -->
-
                 <filter id="roseGlow">
-
                     <feGaussianBlur
                         stdDeviation="7"
                         result="blur"
                     />
 
                     <feMerge>
-
                         <feMergeNode in="blur"></feMergeNode>
                         <feMergeNode in="SourceGraphic"></feMergeNode>
-
                     </feMerge>
-
                 </filter>
 
             </defs>
 
-
-            <!-- STEMS -->
-
             <path
                 class="stem stem--1"
-                d="
-                    M350 650
-                    C320 585 270 500 150 390
-                "
+                d="M350 650 C320 585 270 500 150 390"
             />
 
             <path
                 class="stem stem--2"
-                d="
-                    M350 650
-                    C330 555 290 430 245 290
-                "
+                d="M350 650 C330 555 290 430 245 290"
             />
 
             <path
                 class="stem stem--3"
-                d="
-                    M350 650
-                    C350 500 350 330 350 135
-                "
+                d="M350 650 C350 500 350 330 350 135"
             />
 
             <path
                 class="stem stem--4"
-                d="
-                    M350 650
-                    C370 555 410 425 455 265
-                "
+                d="M350 650 C370 555 410 425 455 265"
             />
 
             <path
                 class="stem stem--5"
-                d="
-                    M350 650
-                    C385 580 450 485 555 355
-                "
-            />
-
-
-            <!-- SIDE DECORATIVE STEMS -->
-
-            <path
-                class="stem stem--side"
-                d="
-                    M350 650
-                    C300 590 220 540 120 500
-                "
+                d="M350 650 C385 580 450 485 555 355"
             />
 
             <path
                 class="stem stem--side"
-                d="
-                    M350 650
-                    C400 590 480 540 580 500
-                "
+                d="M350 650 C300 590 220 540 120 500"
             />
 
-
-            <!-- LEAVES -->
+            <path
+                class="stem stem--side"
+                d="M350 650 C400 590 480 540 580 500"
+            />
 
             <g class="leaves">
 
                 <path
                     class="leaf"
-                    d="
-                        M235 505
-                        C205 470 170 465 145 485
-                        C175 510 205 518 235 505
-                        Z
-                    "
+                    d="M235 505 C205 470 170 465 145 485 C175 510 205 518 235 505 Z"
                 />
 
                 <path
                     class="leaf"
-                    d="
-                        M290 565
-                        C260 530 225 530 205 550
-                        C235 575 265 580 290 565
-                        Z
-                    "
+                    d="M290 565 C260 530 225 530 205 550 C235 575 265 580 290 565 Z"
                 />
 
                 <path
                     class="leaf"
-                    d="
-                        M410 505
-                        C440 470 475 465 500 485
-                        C470 510 440 518 410 505
-                        Z
-                    "
+                    d="M410 505 C440 470 475 465 500 485 C470 510 440 518 410 505 Z"
                 />
 
                 <path
                     class="leaf"
-                    d="
-                        M365 565
-                        C395 530 430 530 450 550
-                        C420 575 390 580 365 565
-                        Z
-                    "
+                    d="M365 565 C395 530 430 530 450 550 C420 575 390 580 365 565 Z"
                 />
 
             </g>
 
-
-            <!-- SMALL BUDS -->
-
             <g class="buds">
-
                 <circle
                     class="bud"
                     cx="125"
@@ -654,17 +325,12 @@
                     cy="500"
                     r="15"
                 />
-
             </g>
-
-
-            <!-- ROSE 1 -->
 
             <g
                 class="rose rose--1"
                 transform="translate(150 390)"
             >
-
                 <g class="rose-art">
 
                     <ellipse
@@ -719,12 +385,7 @@
                     />
 
                     <path
-                        d="
-                            M-15 8
-                            C-7 -5 12 -8 18 5
-                            C22 16 9 24 -2 20
-                            C-13 17 -17 13 -15 8
-                        "
+                        d="M-15 8 C-7 -5 12 -8 18 5 C22 16 9 24 -2 20 C-13 17 -17 13 -15 8"
                         fill="none"
                         stroke="#ffb6b7"
                         stroke-width="6"
@@ -738,17 +399,12 @@
                     />
 
                 </g>
-
             </g>
-
-
-            <!-- ROSE 2 -->
 
             <g
                 class="rose rose--2"
                 transform="translate(245 290) scale(.86)"
             >
-
                 <g class="rose-art">
 
                     <ellipse
@@ -803,12 +459,7 @@
                     />
 
                     <path
-                        d="
-                            M-15 8
-                            C-7 -5 12 -8 18 5
-                            C22 16 9 24 -2 20
-                            C-13 17 -17 13 -15 8
-                        "
+                        d="M-15 8 C-7 -5 12 -8 18 5 C22 16 9 24 -2 20 C-13 17 -17 13 -15 8"
                         fill="none"
                         stroke="#ffb6b7"
                         stroke-width="6"
@@ -822,17 +473,12 @@
                     />
 
                 </g>
-
             </g>
-
-
-            <!-- ROSE 3 -->
 
             <g
                 class="rose rose--3"
                 transform="translate(350 135) scale(.92)"
             >
-
                 <g class="rose-art">
 
                     <ellipse
@@ -887,12 +533,7 @@
                     />
 
                     <path
-                        d="
-                            M-15 8
-                            C-7 -5 12 -8 18 5
-                            C22 16 9 24 -2 20
-                            C-13 17 -17 13 -15 8
-                        "
+                        d="M-15 8 C-7 -5 12 -8 18 5 C22 16 9 24 -2 20 C-13 17 -17 13 -15 8"
                         fill="none"
                         stroke="#ffb6b7"
                         stroke-width="6"
@@ -906,17 +547,12 @@
                     />
 
                 </g>
-
             </g>
-
-
-            <!-- ROSE 4 -->
 
             <g
                 class="rose rose--4"
                 transform="translate(455 265) scale(.82)"
             >
-
                 <g class="rose-art">
 
                     <ellipse
@@ -971,12 +607,7 @@
                     />
 
                     <path
-                        d="
-                            M-15 8
-                            C-7 -5 12 -8 18 5
-                            C22 16 9 24 -2 20
-                            C-13 17 -17 13 -15 8
-                        "
+                        d="M-15 8 C-7 -5 12 -8 18 5 C22 16 9 24 -2 20 C-13 17 -17 13 -15 8"
                         fill="none"
                         stroke="#ffb6b7"
                         stroke-width="6"
@@ -990,17 +621,12 @@
                     />
 
                 </g>
-
             </g>
-
-
-            <!-- ROSE 5 -->
 
             <g
                 class="rose rose--5"
                 transform="translate(555 355) scale(.72)"
             >
-
                 <g class="rose-art">
 
                     <ellipse
@@ -1055,12 +681,7 @@
                     />
 
                     <path
-                        d="
-                            M-15 8
-                            C-7 -5 12 -8 18 5
-                            C22 16 9 24 -2 20
-                            C-13 17 -17 13 -15 8
-                        "
+                        d="M-15 8 C-7 -5 12 -8 18 5 C22 16 9 24 -2 20 C-13 17 -17 13 -15 8"
                         fill="none"
                         stroke="#ffb6b7"
                         stroke-width="6"
@@ -1074,45 +695,24 @@
                     />
 
                 </g>
-
             </g>
-
-
-            <!-- RIBBON -->
 
             <g class="ribbon">
 
                 <path
-                    d="
-                        M320 610
-                        C300 640 285 660 260 680
-                        C290 665 320 650 350 635
-                        C380 650 410 665 440 680
-                        C415 660 400 640 380 610
-                        Z
-                    "
+                    d="M320 610 C300 640 285 660 260 680 C290 665 320 650 350 635 C380 650 410 665 440 680 C415 660 400 640 380 610 Z"
                     fill="#d96b8a"
                     opacity="0.85"
                 />
 
                 <path
                     class="ribbon-tail ribbon-tail--left"
-                    d="
-                        M320 650
-                        C300 675 278 688 250 690
-                        C275 667 287 648 294 630
-                        Z
-                    "
+                    d="M320 650 C300 675 278 688 250 690 C275 667 287 648 294 630 Z"
                 />
 
                 <path
                     class="ribbon-tail ribbon-tail--right"
-                    d="
-                        M380 650
-                        C400 675 423 687 451 690
-                        C426 667 413 648 406 630
-                        Z
-                    "
+                    d="M380 650 C400 675 423 687 451 690 C426 667 413 648 406 630 Z"
                 />
 
             </g>
@@ -1121,11 +721,7 @@
 
     </div>
 
-
-    <!-- FINAL SPARKLES -->
-
     <div class="sparkles">
-
         <span>✦</span>
         <span>✧</span>
         <span>✦</span>
@@ -1134,7 +730,6 @@
         <span>✦</span>
         <span>·</span>
         <span>✧</span>
-
     </div>
 
 </main>
