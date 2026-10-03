@@ -1305,12 +1305,11 @@ body {
 }
 @media (max-width: 600px) {
   .bouquet {
-    width: 430px;
-    height: 500px;
-    bottom: -10px;
+    width: 680px;
+    height: 680px;
   }
   .water {
-    height: 34vh;
+    height: 27vh;
   }
   .moon {
     right: 5%;
