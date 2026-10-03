@@ -54,82 +54,82 @@ body {
 }
 
 
-/* FLOWING AURORA / CLOUD LIGHT */
 
-.aurora {
+
+
+
+
+.flow-light {
+  display: none;
   position: absolute;
   inset: 0;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
+  z-index: 2;
   overflow: hidden;
   pointer-events: none;
-  opacity: 0;
-  animation: aurora-appear 3s ease forwards 2s;
+  opacity: 0.95;
 }
 
-.aurora__wave {
-  fill: none;
-  stroke-linecap: round;
-  filter: url(#auroraBlur);
-  transform-box: fill-box;
-  transform-origin: center;
+.flow-ribbon {
+  position: absolute;
+  left: -35%;
+  width: 170%;
+  height: 24%;
+  border-radius: 50%;
+  filter: blur(28px);
   mix-blend-mode: screen;
+  transform-origin: center;
 }
 
-.aurora__wave--1 {
-  stroke: url(#auroraGradient1);
-  stroke-width: 105;
-  animation: aurora-flow-one 18s ease-in-out infinite alternate;
+.flow-ribbon--1 {
+  top: 19%;
+  background: linear-gradient(90deg, transparent 0%, rgba(67, 198, 218, 0.05) 15%, rgba(86, 219, 214, 0.34) 38%, rgba(157, 116, 221, 0.30) 57%, rgba(220, 122, 188, 0.18) 73%, transparent 100%);
+  transform: rotate(-9deg);
+  animation: flow-one 15s ease-in-out infinite alternate;
 }
 
-.aurora__wave--2 {
-  stroke: url(#auroraGradient2);
-  stroke-width: 82;
-  animation: aurora-flow-two 23s ease-in-out infinite alternate-reverse;
+.flow-ribbon--2 {
+  top: 30%;
+  height: 19%;
+  background: linear-gradient(90deg, transparent 0%, rgba(91, 126, 224, 0.08) 18%, rgba(113, 159, 245, 0.30) 40%, rgba(192, 123, 224, 0.28) 61%, rgba(74, 202, 208, 0.18) 80%, transparent 100%);
+  transform: rotate(7deg);
+  animation: flow-two 19s ease-in-out infinite alternate-reverse;
 }
 
-.aurora__wave--3 {
-  stroke: url(#auroraGradient1);
-  stroke-width: 58;
-  opacity: 0.65;
-  animation: aurora-flow-three 27s ease-in-out infinite alternate;
+.flow-ribbon--3 {
+  top: 42%;
+  height: 17%;
+  background: linear-gradient(90deg, transparent 0%, rgba(66, 180, 215, 0.04) 14%, rgba(74, 203, 201, 0.23) 35%, rgba(126, 106, 210, 0.24) 58%, rgba(202, 119, 188, 0.13) 76%, transparent 100%);
+  transform: rotate(-5deg);
+  animation: flow-three 22s ease-in-out infinite alternate;
 }
 
-@keyframes aurora-appear {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.flow-ribbon--4 {
+  top: 50%;
+  height: 12%;
+  filter: blur(18px);
+  background: linear-gradient(90deg, transparent 0%, rgba(104, 219, 220, 0.05) 20%, rgba(118, 168, 237, 0.22) 42%, rgba(205, 126, 212, 0.18) 62%, transparent 90%);
+  transform: rotate(8deg);
+  animation: flow-four 26s ease-in-out infinite alternate-reverse;
 }
 
-@keyframes aurora-flow-one {
-  from {
-    transform: translate(-5%, 2%) scale(1);
-  }
-  to {
-    transform: translate(7%, -5%) scale(1.08);
-  }
+@keyframes flow-one {
+  from { transform: translateX(-7%) translateY(3%) rotate(-9deg) scaleY(0.9); }
+  to { transform: translateX(9%) translateY(-5%) rotate(-4deg) scaleY(1.15); }
 }
 
-@keyframes aurora-flow-two {
-  from {
-    transform: translate(7%, -3%) scale(1.06);
-  }
-  to {
-    transform: translate(-7%, 4%) scale(0.96);
-  }
+@keyframes flow-two {
+  from { transform: translateX(8%) translateY(-3%) rotate(7deg) scaleY(1); }
+  to { transform: translateX(-9%) translateY(5%) rotate(12deg) scaleY(0.82); }
 }
 
-@keyframes aurora-flow-three {
-  from {
-    transform: translate(-4%, 3%) scale(1.02);
-  }
-  to {
-    transform: translate(6%, -2%) scale(1.1);
-  }
+@keyframes flow-three {
+  from { transform: translateX(-8%) translateY(4%) rotate(-5deg) scaleY(0.85); }
+  to { transform: translateX(7%) translateY(-4%) rotate(2deg) scaleY(1.18); }
+}
+
+@keyframes flow-four {
+  from { transform: translateX(6%) translateY(-2%) rotate(8deg) scaleY(0.9); }
+  to { transform: translateX(-7%) translateY(4%) rotate(3deg) scaleY(1.15); }
 }
 
 .moon {
@@ -1382,22 +1382,97 @@ body {
     opacity: 1;
   }
 }
+
 @media (max-width: 600px) {
-  .bouquet {
-    width: 680px;
-    height: 680px;
+  .flow-light {
+    display: block;
   }
-  .water {
-    height: 27vh;
+
+  .message {
+    top: 38%;
+    width: 92vw;
+    opacity: 1;
+    animation: message-in 1.6s ease forwards 0.7s;
   }
+
+  .message__main {
+    font-size: clamp(32px, 8.5vw, 46px);
+    letter-spacing: 1px;
+  }
+
+  .message__sub {
+    margin-top: 9px;
+    font-size: clamp(13px, 3.5vw, 18px);
+    letter-spacing: 4px;
+  }
+
   .moon {
     right: 5%;
     top: 7%;
     transform: scale(0.7);
   }
+
+  .stars {
+    z-index: 5;
+  }
+
+  .star:nth-child(3n) {
+    width: 4px;
+    height: 4px;
+    box-shadow: 0 0 11px rgba(255, 255, 240, 0.9);
+  }
+
+  .constellations {
+    z-index: 6;
+  }
+
+  .constellation--left {
+    left: 4%;
+    top: 29%;
+    transform: scale(0.82);
+  }
+
+  .constellation--right {
+    right: 1%;
+    top: 42%;
+    transform: scale(0.78);
+  }
+
+  .water {
+    height: 28vh;
+  }
+
+  .bouquet {
+    width: 315px;
+    height: 370px;
+    bottom: -18px;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  .rose--1 {
+    opacity: 0.82;
+  }
+
+  .rose--2 {
+    opacity: 0.9;
+  }
+
+  .rose--3 {
+    opacity: 1;
+  }
+
+  .rose--4 {
+    opacity: 0.9;
+  }
+
+  .rose--5 {
+    opacity: 0.82;
+  }
+
   .water-flower--1 {
     left: 3%;
   }
+
   .water-flower--3 {
     right: 3%;
   }
