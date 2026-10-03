@@ -20,69 +20,6 @@
     <div class="nebula nebula--one"></div>
     <div class="nebula nebula--two"></div>
 
-    <svg
-        class="aurora"
-        viewBox="0 0 1000 1000"
-        preserveAspectRatio="none"
-        aria-hidden="true"
-    >
-
-        <defs>
-
-            <linearGradient
-                id="auroraBlue"
-                x1="0%"
-                y1="0%"
-                x2="100%"
-                y2="0%"
-            >
-                <stop offset="0%" stop-color="#6dd9e8" stop-opacity="0"/>
-                <stop offset="25%" stop-color="#6dd9e8" stop-opacity=".55"/>
-                <stop offset="50%" stop-color="#9b8be8" stop-opacity=".48"/>
-                <stop offset="75%" stop-color="#d58acb" stop-opacity=".38"/>
-                <stop offset="100%" stop-color="#6dd9e8" stop-opacity="0"/>
-            </linearGradient>
-
-            <linearGradient
-                id="auroraPurple"
-                x1="0%"
-                y1="0%"
-                x2="100%"
-                y2="0%"
-            >
-                <stop offset="0%" stop-color="#7a8fe8" stop-opacity="0"/>
-                <stop offset="30%" stop-color="#7a8fe8" stop-opacity=".42"/>
-                <stop offset="58%" stop-color="#c28fe4" stop-opacity=".45"/>
-                <stop offset="82%" stop-color="#66cbd8" stop-opacity=".28"/>
-                <stop offset="100%" stop-color="#7a8fe8" stop-opacity="0"/>
-            </linearGradient>
-
-            <filter id="softAurora">
-                <feGaussianBlur stdDeviation="16"/>
-            </filter>
-
-        </defs>
-
-        <path
-            class="aurora__path aurora__path--1"
-            d="M-120 430 C90 250 280 560 500 390 C690 240 850 470 1120 290"
-            stroke="url(#auroraBlue)"
-        />
-
-        <path
-            class="aurora__path aurora__path--2"
-            d="M-120 520 C110 350 310 650 550 470 C750 320 900 580 1120 400"
-            stroke="url(#auroraPurple)"
-        />
-
-        <path
-            class="aurora__path aurora__path--3"
-            d="M-120 610 C150 440 350 730 600 550 C800 410 920 670 1130 500"
-            stroke="url(#auroraBlue)"
-        />
-
-    </svg>
-
     <div class="moon">
         <div class="moon__body"></div>
     </div>
@@ -394,7 +331,7 @@
 
                     <path
                         class="petal-fold"
-                        d="M -35 -31 C -23 -39 -12 -34 -7 -25"
+                        d="M -30 -47 C -17 -52 -7 -42 -3 -29"
                     />
 
                     <path
@@ -495,7 +432,10 @@
 
                     <path
                         class="bud-highlight"
-                        d="M -6 -12 C 1 -16 7 -12 8 -7"
+                        d="
+                            M -6 -12
+                            C 1 -16 7 -12 8 -7
+                        "
                     />
 
                 </g>
@@ -514,7 +454,10 @@
 
                     <path
                         class="leaf-vein"
-                        d="M 4 -1 C 20 -7 36 -12 52 -12"
+                        d="
+                            M 4 -1
+                            C 20 -7 36 -12 52 -12
+                        "
                     />
 
                 </g>
@@ -634,35 +577,45 @@
                 class="rose rose--1"
                 transform="translate(150 390)"
             >
-                <use href="#roseArtwork"/>
+                <g class="rose-art">
+                    <use href="#roseArtwork"/>
+                </g>
             </g>
 
             <g
                 class="rose rose--2"
                 transform="translate(245 290) scale(.86)"
             >
-                <use href="#roseArtwork"/>
+                <g class="rose-art">
+                    <use href="#roseArtwork"/>
+                </g>
             </g>
 
             <g
                 class="rose rose--3"
                 transform="translate(350 135) scale(.92)"
             >
-                <use href="#roseArtwork"/>
+                <g class="rose-art">
+                    <use href="#roseArtwork"/>
+                </g>
             </g>
 
             <g
                 class="rose rose--4"
                 transform="translate(455 265) scale(.82)"
             >
-                <use href="#roseArtwork"/>
+                <g class="rose-art">
+                    <use href="#roseArtwork"/>
+                </g>
             </g>
 
             <g
                 class="rose rose--5"
                 transform="translate(555 355) scale(.72)"
             >
-                <use href="#roseArtwork"/>
+                <g class="rose-art">
+                    <use href="#roseArtwork"/>
+                </g>
             </g>
 
             <g class="bouquet-ribbon">
